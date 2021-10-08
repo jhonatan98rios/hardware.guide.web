@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import { useEffect } from 'react';
 import Flickity from 'react-flickity-component'
 
 import styles from './style.module.scss'
@@ -33,7 +32,7 @@ const Carousel: NextPage<CarouselInterface> = ({content}) => {
         static
       >
 
-        { content.data.map((hardware: any, index: number)=>{
+        { content.data.map((hardware: any, index: number) => {
           return(
             <div className={styles.card} key={index}>
               <div className={styles.imageBox}>
@@ -46,10 +45,7 @@ const Carousel: NextPage<CarouselInterface> = ({content}) => {
                 }
               </div>
               <div className={styles.description}>
-
-              { 
-                  hardware.name && <h4> {hardware.name} </h4>
-                }
+                { hardware.name && <h4> {hardware.name} </h4> }
 
                 <p> CPU: {hardware.cpu} </p>
                 <p> Placa Mãe: {hardware.moba} </p>
@@ -62,7 +58,7 @@ const Carousel: NextPage<CarouselInterface> = ({content}) => {
               </div>
             </div>
           )
-        }) }
+        })}
         
       </Flickity>
     </div>

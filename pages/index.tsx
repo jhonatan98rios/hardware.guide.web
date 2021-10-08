@@ -22,12 +22,6 @@ const Home: NextPage = () => {
           <img src="/logo.svg" className={styles.image} />
           <h2 className={styles.title}> Smart Gadget </h2>
 
-         {/*  <div className={`${styles.button} p-l-16 p-r-16`} onClick={ () => router.push('/pesquisar') }>
-            <p className={styles.link}> 
-              Começar
-            </p> 
-          </div> */}
-
           <Link href="/pesquisar">
             <p className={styles.link}> 
               Começar

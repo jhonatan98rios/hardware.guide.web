@@ -9,8 +9,6 @@ import Carousel from '../../components/results/Carousel'
 
 import styles from './style.module.scss'
 
-/* function Results({router}){ */
-
 const Results: NextPage = () => {
 
   const [content, setContent] = useState<any>(null)
@@ -52,7 +50,7 @@ const Results: NextPage = () => {
         }
       </div>
     </div>
-  );
+  )
 }
 
 export default withRouter(Results);

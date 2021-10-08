@@ -8,32 +8,28 @@ import styles from './style.module.scss'
 
 const Search: NextPage = () => {
   
-
   const [search, setSearch] = useState('')
   const [warning, setWarning] = useState<string | null>('')
   const router = useRouter()
 
   function navigation(route: string){
 
-    if(route == '/resultado'){
+    if(route !== '/resultado') router.push(route)
 
-      if(search.length <= 0){
-        setWarning('Me fale um pouco sobre o computador que precisa')
-      }else if(search.length <= 8){
-        setWarning('Esse texto é muito curto. Me fale um pouco mais')
-      }else if(search.length > 1024){
-        setWarning('O texto não pode ter mais 1024 caracteres')
-      }else{
-        setWarning(null)
-        router.push({
-          pathname: route,
-          query: { 
-            search
-          }
-        })
-      }
-    }else {
-      router.push(route)
+    if(search.length <= 0){
+      setWarning('Me fale um pouco sobre o computador que precisa')
+    } else if (search.length <= 8){
+      setWarning('Esse texto é muito curto. Me fale um pouco mais')
+    } else if (search.length > 1024){
+      setWarning('O texto não pode ter mais 1024 caracteres')
+    } else {
+      setWarning(null)
+      router.push({
+        pathname: route,
+        query: { 
+          search
+        }
+      })
     }
   }
 
@@ -81,7 +77,6 @@ const Search: NextPage = () => {
     </div>
   )
 }
-
 
 export default Search
 
