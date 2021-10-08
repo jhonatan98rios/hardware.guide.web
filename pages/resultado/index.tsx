@@ -24,7 +24,7 @@ const Results: NextPage = () => {
       .then(response => setContent(response))
       .catch(reject => console.log(reject))
     }
-  }, [])
+  }, [router])
 
   return (
     <div className="transition">

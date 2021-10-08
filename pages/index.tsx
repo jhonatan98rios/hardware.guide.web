@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from './style.module.scss'
 
 import Info from '../components/home/Info'
@@ -19,14 +18,14 @@ const Home: NextPage = () => {
 
       <main>
         <div className={styles.container}>
-          <img src="/icone.png" className={styles.image} />
+          <img src="/icone.png" className={styles.image} alt="Guia de hardware" />
           <h2 className={styles.title}> Guia de Hardware </h2>
 
           <Link href="/pesquisar">
             <div className={styles.button}>
-              <p className={styles.link}> 
+              <a className={styles.link}> 
                 Começar
-              </p> 
+              </a> 
             </div>
           </Link>
 
