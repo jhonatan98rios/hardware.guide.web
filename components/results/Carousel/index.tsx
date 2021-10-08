@@ -22,7 +22,7 @@ interface CarouselInterface {
 const Carousel: NextPage<CarouselInterface> = ({content}) => {
 
   return (
-    <div>
+    <div className={styles.container}>
       <Flickity
         className={styles.carousel}
         elementType={'div'}

@@ -36,31 +36,34 @@ const Search: NextPage = () => {
   return (
     <div className="transition">
       <Head>
-        <title>Smart Gadget | Inicio</title>
-        <meta name="description" content="Encontre o pc ideal para você"></meta>
+        <title>Guia de Hardware | Pesquisar</title>
+        <meta name="description" content="Use inteligência artifícial para encontrar o pc ideal para você"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.container}>
         <form onSubmit={() => navigation('/resultado')} className={styles.container}>
 
-          <h2 className={styles.title}> Me fale um pouco sobre o computador que você procura. </h2>
+          <h2 className={styles.title}> Me fale sobre o computador que você precisa. </h2>
 
           <textarea 
             className={styles.textInput} 
-            placeholder="Procuro um computador para..."
+            placeholder="Procuro um PC para..."
             value={search}
             onChange={e => setSearch(e.target.value) }
             autoFocus
           />
           
-          { warning && <div className={`${styles.warning} m-t-16`}> { warning } </div> }
-
-          <div className={`${styles.button} p-l-16 p-r-16`} onClick={ () => navigation('/resultado') }>
-            <div className={styles.link}> 
-              Confirmar 
-            </div> 
-          </div>
+          { warning && 
+            <div className={`${styles.warning} m-t-16`}> { warning } </div> }
+          {
+            search.length > 8 &&
+            <div className={`${styles.button} p-l-16 p-r-16`} onClick={ () => navigation('/resultado') }>
+              <div className={styles.text}> 
+                Confirmar 
+              </div> 
+            </div>
+          }
 
           <Link href="/">
             <a className={styles.link}>
@@ -69,7 +72,7 @@ const Search: NextPage = () => {
           </Link>
 
           <p className={styles.disclaimer}>
-            * Os preços podem váriar  de acordo com o mercado. Os preços ilustrados são somente para comparação.
+            * O algoritmo está em fase de treino, e pode apresentar inconsistências. As frases serão armazenadas e posteriormente utilizadas no treino do algoritmo.
           </p>
         </form>
       </main>

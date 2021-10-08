@@ -26,12 +26,16 @@
   width: 85%;
   padding: 12px;
   background-color: #0F0F1F;
-  border-width: 1px;
+  border-width: 2px;
   border-color: #4CC392;
   border-radius: 8px;
   margin: 0 auto;
   color: #ffffff;
   text-align: left;
+
+  &:focus { 
+    outline: none !important;
+  }
 }
 
 .button {
@@ -46,20 +50,24 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-  margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .text, .link {
   color: #ffffff;
   margin: 0 auto;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.link {
+  margin-top: 16px;
 }
 
 .disclaimer {
   width: 80%;
   text-align: center;
   color: #ffffff;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 84px;
 }

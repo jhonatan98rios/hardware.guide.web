@@ -29,7 +29,7 @@ const Results: NextPage = () => {
   return (
     <div className="transition">
       <Head>
-        <title>Smart Gadget | Resultado</title>
+        <title>Guia de Hardware | Resultado</title>
         <meta name="description" content="Veja os pcs que separamos para você"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -39,13 +39,15 @@ const Results: NextPage = () => {
 
         { (content && content.status == 200) &&
           <div>
-            <h2 className={`${styles.title}`}> Veja o que separamos para você </h2>
+            <h2 className={styles.title}> Veja as sugestões que separamos para você </h2>
+
             <Carousel content={content} />
+
+            <p className={styles.diclaimer}> * Os preços podem váriar  de acordo com o mercado. Os preços ilustrados são somente para comparação.</p>
 
             <Link href="/">
               <a className={styles.link}> Início </a>
             </Link>
-
           </div>
         }
       </div>

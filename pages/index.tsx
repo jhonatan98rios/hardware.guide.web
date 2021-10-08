@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Smart Gadget</title>
+        <title>Guia de Hardware</title>
         <meta name="description" content="Encontre o pc ideal para você"></meta>
         <link rel="icon" href="/favicon.ico" />
         <meta name='theme-color' content='#000000' />
@@ -19,8 +19,8 @@ const Home: NextPage = () => {
 
       <main>
         <div className={styles.container}>
-          <img src="/logo.svg" className={styles.image} />
-          <h2 className={styles.title}> Smart Gadget </h2>
+          <img src="/icone.png" className={styles.image} />
+          <h2 className={styles.title}> Guia de Hardware </h2>
 
           <Link href="/pesquisar">
             <div className={styles.button}>
@@ -30,11 +30,11 @@ const Home: NextPage = () => {
             </div>
           </Link>
 
-          <Link href="#info">
+          {/* <Link href="#info">
             <a className={styles.anchor}>
               Informações
             </a>
-          </Link>
+          </Link> */}
 
           <p className={styles.disclaimer}> *Não forneça dados sensíveis. Os dados informados serão catalogados e expostos em um banco de dados aberto, para fins de estudo. </p>
         </div>
