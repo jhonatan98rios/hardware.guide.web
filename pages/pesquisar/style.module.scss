@@ -1,0 +1,121 @@
+.container{
+  width: 85%;
+  /* margin: 80px auto; */
+  
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media ( max-height: 650px ) {
+    margin: 16px auto;
+    height: 85vh;
+  }
+
+  .title{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 28px;
+    text-shadow: 0px 0px 5px rgba(0,0,0,.7);
+    font-family: 'Darker Grotesque';
+    margin: 0 auto 48px;
+
+    @media ( max-height: 650px ) {
+      margin: 0 auto 16px;
+    }
+  }
+
+  .label{
+    color: #fff;
+    font-size: clamp(18px, 5.2vw, 22px);
+    font-weight: lighter;
+    line-height: 25px;
+    font-family: 'Darker Grotesque';
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .link{
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    width: 124px;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+} 
+
+.input{
+  //max-width: 85%;
+  width: 90%;
+  max-width: 600px;
+  height: 120px;
+  margin: 16px auto 0px;
+  background-color: rgba(0,0,0,.8);
+  padding: 16px;
+  border: 1px solid #fff;
+  background-color: rgba(0,0,0,.8);
+  border-radius: 10px;
+  position: relative;
+  font-size: 20px;
+  color: #fff;
+  font-weight: lighter;
+  resize: none;
+  font-family: 'Darker Grotesque';
+
+  &:focus{
+    border: 1px solid #28d;
+    outline: none;
+  }
+
+  @media(max-width: 768px){
+    //width: 360px;
+  }
+
+  &::placeholder{
+    font-size: 20px;
+    color: rgba(255,255,255,.3);
+    font-weight: lighter;
+  }
+}
+
+.warning{
+  color: #c00;
+}
+
+.button{
+  max-width: 600px;
+  width: 90%;
+  height: 70px;
+  margin: 16px auto;
+  border: none;
+  font-size: 20px;
+  background-color: #aaa;
+  //background-image: ${({disabled}) => disabled ? 'none' : `linear-gradient(to right, #05b, #28d)`};
+  background-image: linear-gradient(to right, #05b, #28d);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  @media(max-width: 768px){
+    //width: 360px;
+  }
+
+  @media ( max-height: 650px ) {
+    margin: 12px auto;
+    height: 60px;
+  }
+
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+}

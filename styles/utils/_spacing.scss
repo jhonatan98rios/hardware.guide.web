@@ -1,0 +1,20 @@
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+    .m-#{str-slice($side, 0, 1)}-#{$space}-touch {
+      @media (max-width: 768px) {
+        margin-#{$side}: #{$space}px !important;
+      }
+    }
+    .p-#{str-slice($side, 0, 1)}-#{$space}-touch {
+      @media (max-width: 768px) {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}
