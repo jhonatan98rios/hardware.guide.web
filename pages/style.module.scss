@@ -1,21 +1,12 @@
 .container{
-  width: 85%;
-  max-width: 680px;
-  //height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex: 1;
   align-items: center;
+  justify-content: center;
+  background-color: #0a0a1a;
   text-align: center;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  z-index: 0;
+  height: 100vh;
 
   @media ( max-height: 650px ) {
     margin: 32px auto;
@@ -98,25 +89,39 @@
   }
 }
 
+.button {
+  width: 85%;
+  height: 50px;
+  margin: 16px auto 0px;
+  background-color: #8257E6;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-bottom: 16px;
+}
+
 .warning{
   color: #c00;
   z-index: 1;
 }
 
 .button{
-  max-width: 600px;
-  width: 80%;
-  height: 70px;
-  margin: 16px auto;
+  width: 95%;
+  height: 50px;
+  margin: 16px auto 0px;
+  background-color: #8257E6;
   border: none;
   font-size: 20px;
-  background-color: #aaa;
-  //background-image: ${({disabled}) => disabled ? 'none' : `linear-gradient(to right, #05b, #28d)`};
-  background-image: linear-gradient(to right, #05b, #28d);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  margin-bottom: 16px;
   cursor: pointer;
   z-index: 1;
 
@@ -143,4 +148,5 @@
   color: #fff;
   margin-top: 32px;
   max-width: 400px;
+  width: 85%;
 }

@@ -23,9 +23,11 @@ const Home: NextPage = () => {
           <h2 className={styles.title}> Smart Gadget </h2>
 
           <Link href="/pesquisar">
-            <p className={styles.link}> 
-              Começar
-            </p> 
+            <div className={styles.button}>
+              <p className={styles.link}> 
+                Começar
+              </p> 
+            </div>
           </Link>
 
           <Link href="#info">
