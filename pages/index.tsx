@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from './style.module.scss'
 
+import icon from '../assets/icone.png'
+
 const Home: NextPage = () => {
 
   return (
@@ -16,7 +18,7 @@ const Home: NextPage = () => {
 
       <main>
         <div className={styles.container}>
-          <img src="/icone.png" className={styles.image} alt="Guia de hardware" />
+          <img src={icon.src} className={styles.image} alt="Guia de hardware" />
           <h2 className={styles.title}> Guia de Hardware </h2>
 
           <Link href="/pesquisar">

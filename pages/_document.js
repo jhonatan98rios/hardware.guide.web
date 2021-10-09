@@ -16,6 +16,12 @@ export default class MyDocument extends Document {
             data-ad-client="ca-pub-1739197497968733" 
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
+
+          <script 
+            async 
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1739197497968733"  
+            crossorigin="anonymous" 
+          />
             
           <script
             dangerouslySetInnerHTML={{
