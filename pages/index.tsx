@@ -3,8 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from './style.module.scss'
 
-import Info from '../components/home/Info'
-
 const Home: NextPage = () => {
 
   return (
