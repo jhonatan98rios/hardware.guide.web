@@ -21,7 +21,7 @@ const Home: NextPage = () => {
           <img src={icon.src} className={styles.image} alt="Guia de hardware" />
           <h2 className={styles.title}> Guia de Hardware </h2>
 
-          <Link href="/pesquisar">
+          <Link href="/pesquisar" passHref>
             <div className={styles.button}>
               <a className={styles.link}> 
                 Começar
