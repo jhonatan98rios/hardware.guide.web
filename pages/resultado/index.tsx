@@ -18,7 +18,7 @@ const Results: NextPage = () => {
     if(!router.query.search) {
       router.push('/')
     }else{
-      axios.post('https://smart-gadget-web.herokuapp.com/api/smart', {
+      axios.post('https://hardwareguide-api.herokuapp.com/api/smart', {
         text: router.query.search, 
       })
       .then(response => setContent(response))
