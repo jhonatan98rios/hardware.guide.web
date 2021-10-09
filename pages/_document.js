@@ -10,6 +10,13 @@ export default class MyDocument extends Document {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
+          
+          <script 
+            async
+            data-ad-client="ca-pub-1739197497968733" 
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          />
+            
           <script
             dangerouslySetInnerHTML={{
               __html: `

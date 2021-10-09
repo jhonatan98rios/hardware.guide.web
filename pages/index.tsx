@@ -29,11 +29,11 @@ const Home: NextPage = () => {
             </div>
           </Link>
 
-          {/* <Link href="#info">
+          <Link href="/informacoes">
             <a className={styles.anchor}>
               Informações
             </a>
-          </Link> */}
+          </Link>
 
           <p className={styles.disclaimer}> *Não forneça dados sensíveis. Os dados informados serão catalogados e expostos em um banco de dados aberto, para fins de estudo. </p>
         </div>
