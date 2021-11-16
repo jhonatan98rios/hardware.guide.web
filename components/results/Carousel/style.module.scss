@@ -33,12 +33,23 @@
       .imageBox{
         text-align: center;
         margin-bottom: 16px;
-  
+
         .image{
-          //margin: 20px auto;
-          width: 220px;
+          width: 180px;
           margin-top: -50px;
+          margin-bottom: 16px;
           transition: all .5s;
+          border-radius: 100px;
+          border: 2px solid #4CC392;
+          background-color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @media (max-width: 768px) {
+            width: 140px;
+          }
+
           filter: drop-shadow(2px 2px 2px rgba(0,0,0,.5));
   
           @media(max-width: 768px){
