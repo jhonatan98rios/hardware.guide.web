@@ -48,13 +48,34 @@ const Carousel: NextPage<CarouselInterface> = ({content}) => {
                 { hardware.name && <h4> {hardware.name} </h4> }
 
                 <p> CPU: {hardware.cpu} </p>
-                <p> Placa Mãe: {hardware.moba} </p>
-                <p> Armazenamento: {hardware.storage} </p>
-                <p> Ram: {hardware.ram} </p>
-                <p> GPU: {hardware.gpu} </p>
-                <p> Tela: {hardware.screen || 'Não acompanha'}  </p>
-                <p> Sistema: {hardware.so || 'Windows ou Linux'} </p>
-                <p> Valor aproximado: R$ {hardware.price} </p>
+                {
+                  hardware.moba && <p> Placa Mãe: {hardware.moba} </p>
+                }
+                
+                {
+                  hardware.storage &&
+                  <p> Armazenamento: {hardware.storage} </p>
+                }
+                {
+                  hardware.ram &&
+                  <p> Ram: {hardware.ram} </p>
+                }
+                {
+                  hardware.gpu &&
+                  <p> GPU: {hardware.gpu} </p>
+                }
+                { 
+                  hardware.screen &&
+                  <p> Tela: {hardware.screen || 'Não acompanha'}  </p>
+                }
+                {
+                  hardware.so || 'Windows ou Linux' &&
+                  <p> Sistema: {hardware.so || 'Windows ou Linux'} </p>
+                }
+                {
+                  hardware.price &&
+                  <p> Valor aproximado: R$ {hardware.price} </p>
+                }
               </div>
             </div>
           )
