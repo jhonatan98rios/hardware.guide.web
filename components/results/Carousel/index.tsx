@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
 import Flickity from 'react-flickity-component'
 
 import styles from './style.module.scss'
@@ -20,6 +21,8 @@ interface CarouselInterface {
 }
 
 const Carousel: NextPage<CarouselInterface> = ({content}) => {
+
+  const router = useRouter()
 
   return (
     <div className={styles.container}>
@@ -75,6 +78,12 @@ const Carousel: NextPage<CarouselInterface> = ({content}) => {
                 {
                   hardware.price &&
                   <p> Valor aproximado: R$ {hardware.price} </p>
+                }
+                {
+                  hardware.url?.length > 0 &&
+                  <a href={hardware.url} className={styles.button}>
+                    Ver o produto
+                  </a>
                 }
               </div>
             </div>
