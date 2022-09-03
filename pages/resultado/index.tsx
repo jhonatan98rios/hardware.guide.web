@@ -9,7 +9,8 @@ import Carousel from '../../components/results/Carousel'
 
 import styles from './style.module.scss'
 
-const endpoint = 'http://localhost:5000/api/smart' //https://hardwareguide-api.herokuapp.com/api/smart
+//const endpoint = 'http://localhost:5000/api/smart' 
+const endpoint = 'https://hardwareguide-api.herokuapp.com/api/smart'
 
 const Results: NextPage = () => {
 
