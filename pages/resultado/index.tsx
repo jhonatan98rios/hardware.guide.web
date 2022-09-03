@@ -9,16 +9,18 @@ import Carousel from '../../components/results/Carousel'
 
 import styles from './style.module.scss'
 
+const endpoint = 'http://localhost:5000/api/smart' //https://hardwareguide-api.herokuapp.com/api/smart
+
 const Results: NextPage = () => {
 
   const [content, setContent] = useState<any>(null)
   const router = useRouter()
 
   useEffect(() => {
-    if(!router.query.search) {
+    if (!router.query.search) {
       router.push('/')
-    }else{
-      axios.post('https://hardwareguide-api.herokuapp.com/api/smart', {
+    } else {
+      axios.post(endpoint, {
         text: router.query.search, 
       })
       .then(response => setContent(response))
@@ -38,7 +40,7 @@ const Results: NextPage = () => {
         { !content && <img className={styles.svg} src="./atom.svg" alt="loading" /> }
 
         { (content && content.status == 200) &&
-          <div>
+          <>
             <h2 className={styles.title}> Veja as sugestões que separamos para você </h2>
 
             <Carousel content={content} />
@@ -48,7 +50,7 @@ const Results: NextPage = () => {
             <Link href="/">
               <a className={styles.link}> Início </a>
             </Link>
-          </div>
+          </>
         }
       </div>
     </div>

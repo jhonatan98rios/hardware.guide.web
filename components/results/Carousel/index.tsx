@@ -50,7 +50,10 @@ const Carousel: NextPage<CarouselInterface> = ({content}) => {
               <div className={styles.description}>
                 { hardware.name && <h4> {hardware.name} </h4> }
 
-                <p> CPU: {hardware.cpu} </p>
+                {
+                  hardware.cpu && <p> CPU: {hardware.cpu} </p>
+                }
+                
                 {
                   hardware.moba && <p> Placa Mãe: {hardware.moba} </p>
                 }
@@ -72,7 +75,7 @@ const Carousel: NextPage<CarouselInterface> = ({content}) => {
                   <p> Tela: {hardware.screen || 'Não acompanha'}  </p>
                 }
                 {
-                  hardware.so || 'Windows ou Linux' &&
+                  hardware.so &&
                   <p> Sistema: {hardware.so || 'Windows ou Linux'} </p>
                 }
                 {
